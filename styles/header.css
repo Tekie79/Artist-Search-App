@@ -9,12 +9,17 @@
   position: relative;
 }
 .search-bar__input {
-  width: 600px;
+  width: 30vw;
   height: 30px;
   padding: 10px 20px;
   outline: none;
   border: none;
   border-radius: 20px;
+  font-size: 16px;
+  transition: all 0.2s ease-in;
+}
+.search-bar__input:focus {
+  width: 40vw;
 }
 .search-icon {
   color: grey;
@@ -22,4 +27,15 @@
   right: 10px;
   top: 6px;
   cursor: pointer;
+}
+
+/* // responsive */
+
+@media (max-width: 575px) {
+  .search-bar__input {
+    width: 60vw;
+  }
+  .search-bar__input:focus {
+    width: 70vw;
+  }
 }

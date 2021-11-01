@@ -5,8 +5,6 @@ const searchResultContainer = document.querySelector(
   ".search-result__container"
 );
 
-// fetchJsonp('http://localhost:3000').then(res => res.json()).then(json => console.log(json));
-
 // Fetch search result//
 
 const fetchSearch = async (artistName) => {
@@ -19,7 +17,7 @@ const fetchSearch = async (artistName) => {
     } else {
       const data = await response.json();
       const result = data.results;
-      console.log(data);
+
       //Search Result Info
       const resultInfo = `${data.resultCount} results for "${textInput.value}" `;
       searchResultText.innerHTML = resultInfo;
@@ -51,14 +49,18 @@ const fetchSearch = async (artistName) => {
 // Event Handlers
 
 searchBtn.addEventListener("click", () => {
-  const searchName = textInput.value;
-  fetchSearch(searchName);
+  if (textInput.value) {
+    const searchName = textInput.value;
+    fetchSearch(searchName);
+  }
 });
 
 document.addEventListener("keydown", (event) => {
   const keyName = event.key;
 
   if (keyName === "Enter") {
-    fetchSearch(textInput.value);
+    if (textInput.value) {
+      fetchSearch(textInput.value);
+    }
   }
 });
