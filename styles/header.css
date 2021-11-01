@@ -1,0 +1,25 @@
+.search-header {
+  display: flex;
+  justify-content: center;
+  background-color: #008080;
+  padding: 20px;
+  width: 100vw;
+}
+.search-bar {
+  position: relative;
+}
+.search-bar__input {
+  width: 600px;
+  height: 30px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+}
+.search-icon {
+  color: grey;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  cursor: pointer;
+}
