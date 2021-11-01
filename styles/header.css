@@ -9,7 +9,7 @@
   position: relative;
 }
 .search-bar__input {
-  width: 30vw;
+  width: 35vw;
   height: 30px;
   padding: 10px 20px;
   outline: none;
@@ -19,7 +19,7 @@
   transition: all 0.2s ease-in;
 }
 .search-bar__input:focus {
-  width: 40vw;
+  width: 45vw;
 }
 .search-icon {
   color: grey;
@@ -33,7 +33,7 @@
 
 @media (max-width: 575px) {
   .search-bar__input {
-    width: 60vw;
+    width: 55vw;
   }
   .search-bar__input:focus {
     width: 70vw;
